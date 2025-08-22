@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lab1</string>
+    <string name="app_name">vk</string>
     <string name="user_posts_label">Posts</string>
     <string name="user_followers_label">Followers</string>
     <string name="user_following_label">Following</string>

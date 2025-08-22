@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Lab1" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.Lab1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#2d81e1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">#f3f4f6</item>
+        <item name="colorOnSecondary">#2d81e1</item>
+    </style>
 </resources>

@@ -67,7 +67,8 @@ class MainActivity : AppCompatActivity() {
         var avatar: CircleImageView = findViewById(R.id.user_avatar)
         Glide.with(this)
             .load(user.avatarUrl)
-            .placeholder(R.drawable.ic_like)
+            .placeholder(R.drawable.avatar_placeholder)
+            .error(R.drawable.avatar_placeholder)
             .into(avatar)
 
         var name: TextView = findViewById(R.id.user_name)

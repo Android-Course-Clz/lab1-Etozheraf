@@ -25,7 +25,7 @@ class PostAdapter(
                     ColorStateList.valueOf(holder.itemView.context.getColor(android.R.color.holo_red_light))
             } else {
                 holder.buttonLike.iconTint =
-                    ColorStateList.valueOf(holder.itemView.context.getColor(android.R.color.black))
+                    ColorStateList.valueOf(holder.itemView.context.getColor(android.R.color.darker_gray))
             }
             holder.buttonLike.text = post.likes.toString()
         }

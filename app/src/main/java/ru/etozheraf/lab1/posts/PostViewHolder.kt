@@ -40,7 +40,7 @@ class PostViewHolder(
                 ColorStateList.valueOf(itemView.context.getColor(android.R.color.holo_red_light))
         } else {
             buttonLike.iconTint =
-                ColorStateList.valueOf(itemView.context.getColor(android.R.color.black))
+                ColorStateList.valueOf(itemView.context.getColor(android.R.color.darker_gray))
         }
 
         buttonComment.text = post.comments.toString()
