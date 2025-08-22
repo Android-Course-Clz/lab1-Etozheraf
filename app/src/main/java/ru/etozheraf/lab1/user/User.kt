@@ -11,5 +11,5 @@ data class User(
     var isFollowing: Boolean = false,
     val following: Int,
 
-    var posts: MutableList<Post>,
+    var posts: List<Post>,
 )

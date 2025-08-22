@@ -12,14 +12,12 @@ import com.google.android.material.button.MaterialButton
 
 
 class PostViewHolder(
-    root: View,
-    private val onLikeClick: ((Post) -> Unit)? = null,
-    private val onCommentClick: ((Post) -> Unit)? = null
+    root: View
 ) : RecyclerView.ViewHolder(root) {
-    private val text: TextView = root.findViewById(R.id.post_text)
-    private val image: ImageView = root.findViewById(R.id.post_image)
-    private val buttonLike: MaterialButton = root.findViewById(R.id.btn_like)
-    private val buttonComment: MaterialButton = root.findViewById(R.id.btn_comment)
+    val text: TextView = root.findViewById(R.id.post_text)
+    val image: ImageView = root.findViewById(R.id.post_image)
+    val buttonLike: MaterialButton = root.findViewById(R.id.btn_like)
+    val buttonComment: MaterialButton = root.findViewById(R.id.btn_comment)
 
     @SuppressLint("SetTextI18n")
     fun bind(post: Post) {
@@ -45,22 +43,6 @@ class PostViewHolder(
                 ColorStateList.valueOf(itemView.context.getColor(android.R.color.black))
         }
 
-        buttonLike.setOnClickListener {
-            onLikeClick?.invoke(post)
-            if (post.isLiked) {
-                buttonLike.iconTint =
-                    ColorStateList.valueOf(itemView.context.getColor(android.R.color.holo_red_light))
-            } else {
-                buttonLike.iconTint =
-                    ColorStateList.valueOf(itemView.context.getColor(android.R.color.black))
-            }
-            buttonLike.text = post.likes.toString()
-        }
-
         buttonComment.text = post.comments.toString()
-        buttonComment.setOnClickListener {
-            onCommentClick?.invoke(post)
-            buttonComment.text = post.comments.toString()
-        }
     }
 }

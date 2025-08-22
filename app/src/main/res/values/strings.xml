@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">lab1</string>
+    <string name="user_posts_label">Posts</string>
+    <string name="user_followers_label">Followers</string>
+    <string name="user_following_label">Following</string>
+    <string name="user_send_message_button_label">MESSAGE</string>
+    <string name="follow">Follow</string>
+    <string name="following">Following</string>
+    <string name="toast_following">Following %1$s</string>
+    <string name="toast_unfollowed">Unfollowed %1$s</string>
+    <string name="toast_message">Message %1$s</string>
+    <string name="toast_comment">Comment on post</string>
 </resources>

@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_avatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,148 +21,137 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="John Doe"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_avatar" />
+        app:layout_constraintTop_toBottomOf="@id/user_avatar"
+        tools:text="John Doe"/>
 
-
-    <!-- Username -->
     <TextView
         android:id="@+id/user_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@johndoe"
         android:textColor="#757575"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_name" />
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:text="\@johndoe"/>
 
-    <!-- Статистика -->
-    <LinearLayout
-        android:id="@+id/user_posts_count"
+    <TextView
+        android:id="@+id/user_posts_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@id/user_followers_count"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/user_followers_number"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_login">
+        app:layout_constraintTop_toBottomOf="@id/user_login"
+        tools:text="250"/>
 
-        <TextView
-            android:id="@+id/user_posts_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="250"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/user_posts_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Posts"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/user_followers_count"
+    <TextView
+        android:id="@+id/user_posts_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@id/user_following_count"
-        app:layout_constraintStart_toEndOf="@id/user_posts_count"
-        app:layout_constraintTop_toTopOf="@id/user_posts_count">
+        android:text="@string/user_posts_label"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/user_posts_number"
+        app:layout_constraintStart_toStartOf="@id/user_posts_number"
+        app:layout_constraintTop_toBottomOf="@id/user_posts_number" />
 
-        <TextView
-            android:id="@+id/user_followers_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1.2K"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/user_followers_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Followers"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/user_following_count"
+    <TextView
+        android:id="@+id/user_followers_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/user_posts_number"
+        app:layout_constraintEnd_toStartOf="@id/user_following_number"
+        app:layout_constraintStart_toEndOf="@id/user_posts_number"
+        app:layout_constraintTop_toTopOf="@id/user_posts_number"
+        tools:text="1.2K"/>
+
+    <TextView
+        android:id="@+id/user_followers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_followers_label"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/user_followers_number"
+        app:layout_constraintStart_toStartOf="@id/user_followers_number"
+        app:layout_constraintTop_toBottomOf="@id/user_followers_number" />
+
+    <TextView
+        android:id="@+id/user_following_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/user_posts_number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/user_followers_count"
-        app:layout_constraintTop_toTopOf="@id/user_posts_count">
+        app:layout_constraintStart_toEndOf="@id/user_followers_number"
+        app:layout_constraintTop_toTopOf="@id/user_posts_number"
+        tools:text="450"/>
 
-        <TextView
-            android:id="@+id/user_following_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="450"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/user_following_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Following"
-            android:textSize="14sp" />
-    </LinearLayout>
-
+    <TextView
+        android:id="@+id/user_following_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_following_label"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/user_following_number"
+        app:layout_constraintStart_toStartOf="@id/user_following_number"
+        app:layout_constraintTop_toBottomOf="@id/user_following_number" />
 
     <Button
         android:id="@+id/user_send_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
         android:backgroundTint="@android:color/white"
-        android:text="MESSAGE"
+        android:text="@string/user_send_message_button_label"
         app:layout_constraintEnd_toStartOf="@id/user_subscribe"
+        app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_posts_count" />
+        app:layout_constraintTop_toBottomOf="@id/user_posts_label" />
 
     <Button
         android:id="@+id/user_subscribe"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@android:color/white"
-        android:text="FOLLOW"
+        android:text="@string/follow"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@id/user_send_message"
-        app:layout_constraintTop_toBottomOf="@id/user_followers_count" />
-
+        app:layout_constraintTop_toBottomOf="@id/user_following_label" />
 
     <View
         android:id="@+id/divider"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="1dp"
+        android:layout_marginTop="8dp"
         android:background="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_subscribe" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/posts_recycler_view"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider"
         tools:listitem="@layout/item_post" />
 
